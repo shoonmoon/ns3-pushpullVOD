@@ -1,0 +1,12 @@
+## -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    obj = bld.create_ns3_program('push-no-story', ['pushpull', 'wifi'])
+    obj.source = 'push-no-story.cc'
+
+    obj = bld.create_ns3_program('pull-no-story', ['pushpull', 'wifi'])
+    obj.source = 'pull-no-story.cc'
+    
+    obj = bld.create_ns3_program('vodsim-no-realtime', ['pushpull'])
+    obj.source = 'vodsim-no-realtime.cc'
+    
